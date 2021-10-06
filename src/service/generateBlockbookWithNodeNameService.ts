@@ -4,7 +4,7 @@ import configuration from '../config/configuration';
 
 @Injectable()
 export class GenerateBlockbookWithNodeNameService {
-  createBlockBook(nodeName: string): Blockbook {
+  createBlockBookNode(nodeName: string): Blockbook {
     return new Blockbook({
       nodes: configuration().nodeNameMap[nodeName.toString()],
     });

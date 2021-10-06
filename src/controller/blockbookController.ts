@@ -28,7 +28,7 @@ export class BlockbookController {
     @Param('nodeName') nodeName: string,
   ): Promise<SystemInfo> {
     return await this.blockBookService.blockBookStatus(
-      this.generateBlockbookWithnodeNameService.createBlockBook(nodeName),
+      this.generateBlockbookWithnodeNameService.createBlockBookNode(nodeName),
     );
   }
 
@@ -39,7 +39,7 @@ export class BlockbookController {
     @Param('txHash') txHash: string,
   ): Promise<string> {
     return await this.blockBookService.sendTx(
-      this.generateBlockbookWithnodeNameService.createBlockBook(nodeName),
+      this.generateBlockbookWithnodeNameService.createBlockBookNode(nodeName),
       txHash,
     );
   }
